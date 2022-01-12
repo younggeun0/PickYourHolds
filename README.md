@@ -1,8 +1,8 @@
-# [Pick Your Holds(a.k.a 찍볼) 🧗‍♂️🧗‍♀️]((https://younggeun0.github.io/projects/pickyourholds/index.html))
+# Pick Your Holds(a.k.a 찍볼) 🧗‍♂️🧗‍♀️
 
 ---
 
-## 스포츠 클라이밍용 찍볼 웹앱
+## [스포츠 클라이밍용 찍볼 웹앱 - 바로가기](https://younggeun0.github.io/projects/pickyourholds/index.html)
 
 > **찍볼 == 찍어서 볼더링**
 
