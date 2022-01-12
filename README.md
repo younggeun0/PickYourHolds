@@ -16,7 +16,10 @@
 
 ## 앱 이미지
 
-<span style="display:block; text-align:center">![pyh01](https://github.com/younggeun0/younggeun0.github.io/raw/master/_posts/img/toyProjects/pyh/pyh01.png?raw=true)</span>
+<p align="center">
+    <img src="https://github.com/younggeun0/younggeun0.github.io/raw/master/_posts/img/toyProjects/pyh/pyh01.png?raw=true">
+<p>
 
-<span style="display:block; text-align:center">![pyh01](https://github.com/younggeun0/younggeun0.github.io/raw/master/_posts/img/toyProjects/pyh/pyh02.png?raw=true)</span>
-
+<p align="center">
+    <img src="https://github.com/younggeun0/younggeun0.github.io/raw/master/_posts/img/toyProjects/pyh/pyh02.png?raw=true">
+<p>
