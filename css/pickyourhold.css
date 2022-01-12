@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'ConcertOne';
+    src: url('https://younggeun0.github.io/projects/pickyourholds/fonts/concertone-regular-webfont.woff2');
+}
+
+body {
+    font-family: 'ConcertOne', sans-serif;
+    text-align: center;
+    background-color: #282C34;
+    color: #ABB2BB;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #409EEF;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: #E5A656;
+}
+
+a {
+    text-decoration: none;
+}
+
+canvas {
+    position: absolute;
+    left: 0px;
+}
+
+#copyright {
+    font-size: 0.9rem;
+    color: #ABB2BB;
+    inherits: inherit;
+}
+
+#btn-start {
+    font-family: 'ConcertOne', Arial, sans-serif;
+    font-size: 2.5rem;
+    margin: 30% 0 10% 0;
+    background-color: #C678DD;
+    color: #282C34;
+
+    border-radius: 10px;
+    border: none;
+    -webkit-appearance: none;
+}
+
+#pyh-wrapping-canvas-div {
+    position: relative;
+    display:inline-block;
+    border: 2px solid #ABB2BB;
+    border-radius: 5px;
+}
+
+#pyh-wrapping-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#pyh-bottom-menu {
+    margin: 3% 0%;
+    line-height: normal;
+}
+
+.pyh-btns {
+    width: 7%;
+    -webkit-appearance: none;
+    background-color: #282C34;
+    margin: 10px 20px;
+    touch-action: manipulation;
+    /* prevent auto zoom */
+}

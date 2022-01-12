@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>PICK YOUR HOLDS (a.k.a 찍볼)</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/RouteSetter.js" charset="utf-8"></script>
+<link rel="stylesheet" href="css/pickyourhold.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+<div id="pyh-wrapping-div">
+    <div id="pyh-default-div" style="display:block;">
+        <div>
+            <h1>PICK</h1>
+            <h2><span style="color:#98C379;">YOUR</span> <span style="color:#C85358;">HOLDS</span><br/></h2>
+            <h3>(a.k.a 찍볼)</h3>
+        </div>
+        <div style="margin:8% 0 0;">
+            <img src="img/climber1.png" alt="climber1" style="width:20%;">
+            <img src="img/climber2.png" alt="climber2" style="width:20%;">
+        </div>
+        <div>
+            <input id="btn-start" 
+                type="button" value=" START " onclick="InitRouteSetter()" 
+                alt="Pick Your Holds Button">
+        </div>
+        <div>
+            <a href="https://github.com/younggeun0" id="copyright">created by younggeun0</a>
+        </div>
+    </div>
+    <div id="pyh-setter-div" style="display:none;">
+        <div id="pyh-wrapping-canvas-div">
+            <canvas id="pyh-origin-canvas"></canvas>
+            <canvas id="pyh-marker-canvas"></canvas>
+        </div>
+        <div id="pyh-bottom-menu">
+            <img src="img/grin.png" alt="undo button" class="pyh-btns" id="pyh-undo" onclick="Undo()">
+            <img src="img/sparkle.png" alt="undo button" class="pyh-btns" id="pyh-reset" onclick="Reset()">
+            <img src="img/camera.png" alt="undo button" class="pyh-btns" onclick="SelectFile()">
+            <img src="img/disk.png" alt="undo button" class="pyh-btns" onclick="DownloadImage()">
+            <a id="pyh-download" style="display:none;" download="image.png">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // mobile vertical align issue fixed
+    // ref: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
+    let pSetter = null;
+    function InitRouteSetter() {
+        if (!pSetter) {
+            const pOriginCanvas = document.getElementById('pyh-origin-canvas');
+            const pMarkerCanvas = document.getElementById('pyh-marker-canvas');
+            const pBtnHands = document.getElementById('btn-add-hands');
+            const pBtnFeet = document.getElementById('btn-add-feet');
+            
+            pSetter = new RouteSetter();
+            pSetter.Ready(pOriginCanvas, pMarkerCanvas, pBtnHands);
+            pSetter.AddEvents();
+        }
+        SelectFile();
+    }
+    function SelectFile() {
+        const pDefautDiv = document.getElementById('pyh-default-div');
+        const pSetterDiv = document.getElementById('pyh-setter-div');
+        pSetter.SelectFile(pDefautDiv, pSetterDiv);
+    }
+    function Undo() {
+        pSetter.Undo();
+    }
+    function Reset() {
+        pSetter.RestoreImage();
+    }
+    function DownloadImage() {
+        const pLinkNode = document.getElementById('pyh-download');
+        pSetter.DownloadImage(pLinkNode);
+    }
+</script>
+</body>
+</html>
