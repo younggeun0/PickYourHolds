@@ -1,6 +1,6 @@
 # Pick Your Holds(a.k.a 찍볼) 🧗‍♂️🧗‍♀️
 
-> Using jQuery
+jQuery를 이용한 토이프로젝트
 
 ## [스포츠 클라이밍용 찍볼 웹앱 - 바로가기](https://younggeun0.github.io/projects/pickyourholds/index.html)
 
